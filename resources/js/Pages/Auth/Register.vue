@@ -12,6 +12,12 @@ const form = useForm({
     password: "",
     password_confirmation: "",
 });
+
+function submit() {
+    form.post(route("register"), {
+        onFinish: () => form.reset(),
+    });
+}
 </script>
 <template>
     <Container class="w-1/2">
@@ -22,7 +28,7 @@ const form = useForm({
                 <TextLink routeName="/" label="Login" />
             </p>
         </div>
-        <form class="space-y-6">
+        <form @submit.prevent="submit" class="space-y-6">
             <InputField label="Name" icon="id-badge" v-model="form.name"/>
             <InputField label="Email" type="email" icon="at"v-model="form.email" />
             <InputField label="Password" type="password" icon="key"v-model="form.password" />

@@ -3,7 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\Register\StoreRequest;
+use App\Services\Auth\RegisterService;
 use Inertia\Inertia;
 
 class RegisterController extends Controller
@@ -13,8 +14,15 @@ class RegisterController extends Controller
         return Inertia::render('Auth/Register');
     }
 
-    public function store()
+    public function store(StoreRequest $request, RegisterService $registerService)
     {
-//
+        $registerService->register(
+            $request->name,
+            $request->email,
+            $request->password,
+            $request->role
+        );
+
+        return redirect()->route('home');
     }
 }

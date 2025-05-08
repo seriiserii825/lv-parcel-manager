@@ -3,6 +3,7 @@ import { createApp, DefineComponent, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import Main from "./Layouts/Main.vue";
 import {setThemeOnLoad} from "./utils/theme";
+import { ZiggyVue } from "../../vendor/tightenco/ziggy";
 
 createInertiaApp({
     resolve: (name) => {
@@ -15,6 +16,7 @@ createInertiaApp({
     setup({ el, App, props, plugin }) {
         createApp({ render: () => h(App, props) })
             .use(plugin)
+            .use(ZiggyVue)
             .mount(el);
     },
 });

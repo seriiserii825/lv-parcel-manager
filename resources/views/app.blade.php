@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     @vite('resources/js/app.ts')
+    @routes
     @inertiaHead
 </head>
 <body class="font-Roboto bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-100">
