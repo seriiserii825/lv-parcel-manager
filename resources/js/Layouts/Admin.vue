@@ -14,6 +14,9 @@ const is_register = component === "Auth/Register";
 </script>
 
 <template>
+    <Head>
+        <title>Admin</title>
+    </Head>
     <div class="flex h-screen bg-gray-50 dark:bg-gray-900 min-h-screen">
         <DesktopSidebar/>
         <MobileSidebar/>

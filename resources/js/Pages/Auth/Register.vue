@@ -27,6 +27,10 @@ function submit() {
 }
 </script>
 <template>
+    <Head>
+        <title>Register</title>
+        <meta name="description" content="Register a new account" />
+    </Head>
     <Container class="w-1/2">
         <div class="mb-8 text-center">
             <Title>Register a new account</Title>

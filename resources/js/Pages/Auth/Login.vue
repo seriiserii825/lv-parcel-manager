@@ -25,6 +25,10 @@ function submit() {
 }
 </script>
 <template>
+    <Head>
+        <title>Login</title>
+        <meta name="description" content="Login to your account" />
+    </Head>
     <Container class="w-1/2">
         <div class="mb-8 text-center">
             <Title>Login</Title>
