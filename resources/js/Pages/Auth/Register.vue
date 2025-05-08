@@ -4,6 +4,14 @@ import Title from "../../Components/Title.vue";
 import TextLink from "../../Components/TextLink.vue";
 import InputField from "../../Components/InputField.vue";
 import PrimaryBtn from "../../Components/PrimaryBtn.vue";
+import {useForm} from "@inertiajs/vue3";
+
+const form = useForm({
+    name: "",
+    email: "",
+    password: "",
+    password_confirmation: "",
+});
 </script>
 <template>
     <Container class="w-1/2">
@@ -23,7 +31,7 @@ import PrimaryBtn from "../../Components/PrimaryBtn.vue";
                 By creating an account, you agree to our Terms of Service and
                 Privacy Policy.
             </p>
-            <PrimaryBtn>Register</PrimaryBtn>
+            <PrimaryBtn :disabled="form.processing">Register</PrimaryBtn>
         </form>
     </Container>
 </template>
