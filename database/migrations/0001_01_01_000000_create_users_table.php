@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->enum('role', ['admin', 'manager'])->default('manager');
             $table->foreignId('client_id')->nullable();
+            $table->enum('approved', ['initial', 'approved', 'rejected'])->default('initial');
             $table->rememberToken();
             $table->timestamps();
         });
