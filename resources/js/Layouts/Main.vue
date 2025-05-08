@@ -6,9 +6,9 @@ import { switchTheme } from "../utils/theme";
 const { component } = usePage();
 const is_home = component === "Home";
 const is_register = component === "Auth/Register";
+const is_login = component === "Auth/Login";
 const page = usePage();
 const is_logged_in = !!page.props.auth?.user;
-
 </script>
 
 <template>
@@ -18,9 +18,14 @@ const is_logged_in = !!page.props.auth?.user;
         >
             <NavLink url="/" :active="is_home">Home</NavLink>
             <div class="flex items-center space-x-6">
-                <NavLink v-if="!is_logged_in" url="/register" :active="is_register"
-                    >Register</NavLink
-                >
+                <div v-if="!is_logged_in">
+                    <NavLink :url="route('login')" :active="is_login"
+                        >Login</NavLink
+                    >
+                    <NavLink :url="route('register')" :active="is_register"
+                        >Register</NavLink
+                    >
+                </div>
                 <NavLink v-else url="/logout">Logout</NavLink>
                 <button
                     @click="switchTheme"
