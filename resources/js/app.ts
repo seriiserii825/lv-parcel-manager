@@ -19,6 +19,11 @@ createInertiaApp({
             .use(ZiggyVue)
             .mount(el);
     },
+    progress: {
+        color: "#4B5563",
+        includeCSS: true,
+        showSpinner: true,
+    }
 });
 
 setThemeOnLoad();
