@@ -11,6 +11,10 @@ defineProps({
         type: String,
         default: "text",
     },
+    error: {
+        type: String,
+        default: "",
+    },
 });
 </script>
 
@@ -39,5 +43,11 @@ defineProps({
                 class="block w-full rounded-md pr-3 pl-9 text-sm dark:text-slate-900 border-slate-300 outline-0 focus:ring-1 focus:ring-inset focus:ring-indigo-400 focus:border-indigo-400 placeholder:text-slate-400"
             />
         </div>
+        <p
+            v-if="error"
+            class="mt-2 text-sm text-red-600 dark:text-red-500"
+        >
+            {{ error }}
+        </p>
     </div>
 </template>
