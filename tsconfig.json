@@ -1,0 +1,14 @@
+{
+    "include": [
+        "resources/**/*.ts",
+        "resources/**/*.d.ts",
+        "resources/**/*.vue"
+    ],
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext", // or "es2020", "es2022", etc.
+        "moduleResolution": "bundler", // or "node" if not using Vite
+        "lib": ["esnext", "dom"],
+        "types": ["vite/client"] // if you're using Vite
+    }
+}

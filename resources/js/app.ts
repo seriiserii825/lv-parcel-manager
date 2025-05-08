@@ -1,13 +1,12 @@
-import "./bootstrap";
 import "../css/app.css";
-import { createApp, h } from "vue";
+import { createApp, DefineComponent, h } from "vue";
 import { createInertiaApp } from "@inertiajs/vue3";
 import Main from "./Layouts/Main.vue";
 import {setThemeOnLoad} from "./utils/theme";
 
 createInertiaApp({
     resolve: (name) => {
-        const pages = import.meta.glob("./Pages/**/*.vue", { eager: true });
+        const pages = import.meta.glob<DefineComponent>("./Pages/**/*.vue", { eager: true });
         let page = pages[`./Pages/${name}.vue`];
 
         page.default.layout = page.default.layout || Main;
