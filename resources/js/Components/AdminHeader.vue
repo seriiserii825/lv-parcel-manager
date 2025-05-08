@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import {switchTheme} from "../utils/theme";
 import NavLink from "./NavLink.vue";
 </script>
 
@@ -160,6 +161,14 @@ import NavLink from "./NavLink.vue";
                             </li>
                         </ul>
                     </template>
+                </li>
+                <li>
+                    <button
+                        @click="switchTheme"
+                        class="hover:bg-slate-700 w-6 h-6 grid place-items-center rounded-full hover:outline outline-1 outline-white"
+                    >
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </button>
                 </li>
                 <!-- Profile menu -->
                 <li class="relative">
