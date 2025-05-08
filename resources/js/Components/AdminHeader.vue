@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import NavLink from './NavLink.vue';
+import NavLink from "./NavLink.vue";
 </script>
 
 <template>
@@ -26,6 +26,7 @@ import NavLink from './NavLink.vue';
                     ></path>
                 </svg>
             </button>
+            <NavLink url="/">Go Home</NavLink>
             <!-- Search input -->
             <div class="flex justify-center flex-1 lg:mr-32">
                 <div
@@ -257,9 +258,6 @@ import NavLink from './NavLink.vue';
                             </li>
                         </ul>
                     </template>
-                </li>
-                <li class="relative">
-                    <NavLink url="/">Go Home</NavLink>
                 </li>
             </ul>
         </div>
