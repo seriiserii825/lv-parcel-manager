@@ -2,6 +2,7 @@
 import { usePage } from "@inertiajs/vue3";
 import NavLink from "../Components/NavLink.vue";
 import { switchTheme } from "../utils/theme";
+import Logo from "../Components/Icons/Logo.vue";
 
 const { component } = usePage();
 const is_home = component === "Home";
@@ -16,7 +17,7 @@ const is_logged_in = !!page.props.auth?.user;
         <nav
             class="p-6 mx-auto max-w-screen-lg flex items-center justify-between"
         >
-            <NavLink url="/" :active="is_home">Home</NavLink>
+            <Logo />
             <div class="flex items-center space-x-6">
                 <div v-if="!is_logged_in">
                     <NavLink :url="route('login')" :active="is_login"
