@@ -24,6 +24,6 @@ class LoginController extends Controller
         }
         // Log the user in
         auth()->login($user);
-        return redirect()->route('home')->with('success', 'Login successful');
+        return redirect()->route('admin')->with('success', 'Login successful');
     }
 }

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {switchTheme} from "../utils/theme";
+import { switchTheme } from "../utils/theme";
 import NavLink from "./NavLink.vue";
 </script>
 
@@ -161,6 +161,11 @@ import NavLink from "./NavLink.vue";
                             </li>
                         </ul>
                     </template>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-brands fa-guilded"></i>
+                    </a>
                 </li>
                 <li>
                     <button
