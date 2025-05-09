@@ -6,7 +6,7 @@ import NavLink from "./NavLink.vue";
 <template>
     <header class="z-10 py-4 bg-white shadow-md dark:bg-gray-800">
         <div
-            class="container flex items-center justify-between h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
+            class="container flex items-center justify-between gap-2 h-full px-6 mx-auto text-purple-600 dark:text-purple-300"
         >
             <!-- Mobile hamburger -->
             <button
@@ -27,7 +27,6 @@ import NavLink from "./NavLink.vue";
                     ></path>
                 </svg>
             </button>
-            <NavLink url="/">Go Home</NavLink>
             <!-- Search input -->
             <div class="flex justify-center flex-1 lg:mr-32">
                 <div

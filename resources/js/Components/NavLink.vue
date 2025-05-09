@@ -14,7 +14,7 @@ const props = defineProps({
 <template>
     <a
         :href="url"
-        class="px-3 py-2 rounded-lg hover:bg-slate-700"
+        class="px-3 py-2 rounded-lg bg-slate-900 hover:bg-slate-700"
         :class="{'bg-slate-700': active}"
     >
         <slot />

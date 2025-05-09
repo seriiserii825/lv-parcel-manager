@@ -1,16 +1,8 @@
 <script setup lang="ts">
-import { usePage } from "@inertiajs/vue3";
-import NavLink from "../Components/NavLink.vue";
-import { switchTheme } from "../utils/theme";
 import DesktopSidebar from "../Components/DesktopSidebar.vue";
 import AdminHeader from "../Components/AdminHeader.vue";
-
-function changeTheme() {
-    switchTheme();
-}
-const { component } = usePage();
-const is_home = component === "Home";
-const is_register = component === "Auth/Register";
+import MobileSidebar from "../Components/MobileSidebar.vue";
+import {Head} from "@inertiajs/vue3";
 </script>
 
 <template>

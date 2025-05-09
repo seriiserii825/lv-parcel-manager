@@ -6,6 +6,7 @@ import InputField from "../../Components/InputField.vue";
 import PrimaryBtn from "../../Components/PrimaryBtn.vue";
 import { useForm } from "@inertiajs/vue3";
 import Checkbox from "../../Components/Ui/Checkbox.vue";
+import {Head} from "@inertiajs/vue3";
 
 const form = useForm({
     email: "",
