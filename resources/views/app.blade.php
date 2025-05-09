@@ -14,7 +14,7 @@
     @routes
     @inertiaHead
 </head>
-<body class="font-Roboto bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-100">
+<body class="bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-100">
     @inertia
 </body>
 </html>
