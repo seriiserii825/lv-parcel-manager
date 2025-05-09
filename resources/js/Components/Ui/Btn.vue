@@ -15,6 +15,10 @@ const props = defineProps({
         >,
         default: "primary",
     },
+    disabled: {
+        type: Boolean,
+        default: false,
+    },
 });
 
 const emit = defineEmits(["emit_click"]);
@@ -45,6 +49,9 @@ onMounted(() => {
                 class_name.value = "bg-slate-900 hover:bg-slate-700";
                 break;
         }
+    }
+    if (props.disabled) {
+        class_name.value = "bg-gray-500 cursor-not-allowed";
     }
 });
 </script>
