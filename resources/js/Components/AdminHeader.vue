@@ -162,7 +162,7 @@ import NavLink from "./NavLink.vue";
                     </template>
                 </li>
                 <li>
-                    <a href="#">
+                    <a :href="route('admin.style-guide')">
                         <i class="fa-brands fa-guilded"></i>
                     </a>
                 </li>

@@ -24,12 +24,12 @@ import Logo from "./Icons/Logo.vue";
                 />
                 <SidebarLink
                     route_name="admin"
-                    text="Submenu"
-                    icon="fas fa-tachometer-alt"
+                    text="StyleGuide"
+                    icon="fa-brands fa-guilded"
                     :sub_menu="[
                         {
-                            text: 'Login',
-                            route_name: 'admin',
+                            text: 'Button',
+                            route_name: 'admin.style-guide.button',
                         },
                         {
                             text: 'Register',

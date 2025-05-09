@@ -12,7 +12,6 @@ createInertiaApp({
             eager: true,
         });
         let page = pages[`./Pages/${name}.vue`];
-        console.log(name, "name");
         page.default.layout = name.startsWith("Admin/") ? Admin : Main;
         // page.default.layout = page.default.layout || Main;
         return page;
