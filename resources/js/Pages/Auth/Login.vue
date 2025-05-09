@@ -5,10 +5,12 @@ import TextLink from "../../Components/TextLink.vue";
 import InputField from "../../Components/InputField.vue";
 import PrimaryBtn from "../../Components/PrimaryBtn.vue";
 import { useForm } from "@inertiajs/vue3";
+import Checkbox from "../../Components/Ui/Checkbox.vue";
 
 const form = useForm({
     email: "",
     password: "",
+    remember: false,
 });
 
 function submit() {
@@ -51,6 +53,12 @@ function submit() {
                 v-model="form.password"
                 :error="form.errors.password"
             />
+            <div class="flex justify-between">
+                <Checkbox name="remember" v-model="form.remember">
+                    Remember me
+                </Checkbox>
+                <TextLink routeName="route('home')" label="Forgot password?" />
+            </div>
             <PrimaryBtn :disabled="form.processing">Login</PrimaryBtn>
         </form>
     </Container>

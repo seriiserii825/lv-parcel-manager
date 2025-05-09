@@ -36,7 +36,7 @@ function submit() {
             <Title>Register a new account</Title>
             <p>
                 Already have an account?
-                <TextLink routeName="/" label="Login" />
+                <TextLink :routeName="route('login')" label="Login" />
             </p>
         </div>
         <form @submit.prevent="submit" class="space-y-6">
