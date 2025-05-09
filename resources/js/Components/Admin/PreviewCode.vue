@@ -46,17 +46,17 @@ function emitClick() {
             >
         </footer>
             <Vue3SlideUpDown v-model="show_code">
-                <div class="code-snippet">
+                <div class="border border-gray-500 p-4">
                     <pre> <slot name="code"></slot></pre>
                 </div>
             </Vue3SlideUpDown>
             <Vue3SlideUpDown v-model="show_source">
-                <div class="code-snippet">
+                <div class="border border-gray-500 p-4">
                     <pre> <slot name="source"></slot> </pre>
                 </div>
             </Vue3SlideUpDown>
             <Vue3SlideUpDown v-model="toggle_props">
-                <div class="code-props">
+                <div class="border border-gray-500 p-4">
                     <slot name="code_props"></slot>
                 </div>
             </Vue3SlideUpDown>
