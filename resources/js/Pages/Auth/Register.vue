@@ -32,7 +32,7 @@ function submit() {
         <meta name="description" content="Register a new account" />
     </Head>
     <Container class="w-1/2">
-        <div class="mb-8 text-center text-dark-color dark:text-color">
+        <div class="mb-8 text-center">
             <Title>Register a new account</Title>
             <p>
                 Already have an account?

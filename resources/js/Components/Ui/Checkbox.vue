@@ -16,7 +16,7 @@ defineProps({
         />
         <label
             :for="name"
-            class="block text-sm font-medium text-slate-700 dark:text-slate-300 cursor-pointer"
+            class="block text-sm font-medium dark:text-dark-color cursor-pointer"
         >
             <slot />
         </label>

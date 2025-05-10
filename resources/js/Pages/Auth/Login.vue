@@ -33,7 +33,7 @@ function submit() {
         <meta name="description" content="Login to your account" />
     </Head>
     <Container class="w-1/2">
-        <div class="mb-8 text-center text-dark-color dark:text-color">
+        <div class="mb-8 text-center dark:text-dark-color">
             <Title>Login</Title>
             <p>
                 Don't have an account?
