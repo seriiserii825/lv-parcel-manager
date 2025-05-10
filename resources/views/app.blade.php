@@ -14,7 +14,7 @@
     @vite('resources/js/app.ts')
     @inertiaHead
 </head>
-<body class="text-color bg-primary-light">
+<body class="text-color bg-primary-300">
     @inertia
 </body>
 </html>

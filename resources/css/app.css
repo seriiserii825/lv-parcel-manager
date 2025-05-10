@@ -4,9 +4,12 @@
 
 :root {
     --primary: #1e293b; /* bg-slate-800 */
-    --dark-primary: #fff; /* text-slate-50 */
     --primary-light: #334155; /* bg-slate-700 */
-    --dark-primary-light: #f1f5f9; /* text-slate-100 */
+    --primary-dark: #1e293b; /* bg-slate-800 */
     --color: #f1f5f9; /* text-slate-100 */
+
+    --dark-primary: #fff; /* text-slate-50 */
+    --dark-primary-light: #f1f5f9; /* text-slate-100 */
+    --dark-primary-dark: #334155; /* bg-slate-700 */
     --dark-color: #1e293b; /* bg-slate-800 */
 }

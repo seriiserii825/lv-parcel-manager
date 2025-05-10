@@ -18,12 +18,14 @@ export default {
             colors: {
                 primary: {
                     DEFAULT: "var(--primary)",
-                    light: "var(--primary-light)",
+                    300: "var(--primary-light)",
+                    700: "var(--primary-dark)",
                 },
                 dark: {
                     primary: {
                         DEFAULT: "var(--dark-primary)",
-                        light: "var(--dark-primary-light)",
+                        300: "var(--dark-primary-light)",
+                        700: "var(--dark-primary-dark)",
                     },
                     color: "var(--dark-color)",
                 },
