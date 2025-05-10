@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    @vite('resources/js/app.ts')
     @routes
+    @vite('resources/js/app.ts')
     @inertiaHead
 </head>
 <body class="bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-100">

@@ -23,7 +23,6 @@ import Logo from "./Icons/Logo.vue";
                     icon="fas fa-tachometer-alt"
                 />
                 <SidebarLink
-                    route_name="admin"
                     text="StyleGuide"
                     icon="fa-brands fa-guilded"
                     :sub_menu="[

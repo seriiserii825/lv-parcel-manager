@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { PropType, ref } from "vue";
+import { onMounted, PropType, ref } from "vue";
+import { route } from "ziggy-js";
 
 type TSubmenu = {
     text: string;
@@ -8,7 +9,7 @@ type TSubmenu = {
 const props = defineProps({
     route_name: {
         type: String,
-        required: true,
+        required: false,
     },
     text: {
         type: String,
@@ -23,15 +24,29 @@ const props = defineProps({
         default: () => [],
     },
 });
-
+const is_active_route = ref(false);
 const is_visible_submenu = ref(false);
 const toggleSubmenu = () => {
     is_visible_submenu.value = !is_visible_submenu.value;
 };
+
+onMounted(() => {
+    is_active_route.value = props.sub_menu.some((item) => {
+        return route().current(item.route_name);
+    });
+    if (is_active_route.value) {
+        is_visible_submenu.value = true;
+    }
+});
 </script>
 
 <template>
-    <li class="relative px-6 py-3">
+    <li
+        class="relative px-6 py-3"
+        :class="{
+            'bg-gray-50 dark:bg-gray-900': is_active_route,
+        }"
+    >
         <a
             class="inline-flex items-center gap-2 w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200"
             :href="route(route_name)"
@@ -54,7 +69,7 @@ const toggleSubmenu = () => {
     </li>
     <ul
         v-if="sub_menu.length && is_visible_submenu"
-        class="p-2 mt-2 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
+        class="px-6 py-3 space-y-2 overflow-hidden text-sm font-medium text-gray-500 rounded-md shadow-inner bg-gray-50 dark:text-gray-400 dark:bg-gray-900"
         aria-label="submenu"
     >
         <li

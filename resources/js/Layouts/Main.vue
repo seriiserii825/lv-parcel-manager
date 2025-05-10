@@ -15,11 +15,11 @@ const is_logged_in = !!page.props.auth?.user;
 <template>
     <header class="bg-slate-800 text-slate-100">
         <nav
-            class="p-6 mx-auto max-w-screen-lg flex items-center justify-between"
+            class="p-6 mx-auto max-w-screen-lg flex items-center justify-between gap-2"
         >
             <Logo />
-            <div class="flex items-center space-x-6">
-                <div v-if="!is_logged_in">
+            <div class="flex items-center space-x-6 gap-2">
+                <div v-if="!is_logged_in" class="flex gap-2">
                     <NavLink :url="route('login')" :active="is_login"
                         >Login</NavLink
                     >
@@ -34,7 +34,7 @@ const is_logged_in = !!page.props.auth?.user;
                 >
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
-                <NavLink class="flex gap-2 items-center" url="/admin">
+                <NavLink v-if="is_logged_in" class="flex gap-2 items-center" url="/admin">
                     <i class="fa-solid fa-user"></i>
                     <span>Admin</span>
                 </NavLink>
