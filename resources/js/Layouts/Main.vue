@@ -5,7 +5,6 @@ import { switchTheme } from "../utils/theme";
 import Logo from "../Components/Icons/Logo.vue";
 
 const { component } = usePage();
-const is_home = component === "Home";
 const is_register = component === "Auth/Register";
 const is_login = component === "Auth/Login";
 const page = usePage();
@@ -13,7 +12,9 @@ const is_logged_in = !!page.props.auth?.user;
 </script>
 
 <template>
-    <header class="bg-slate-800 text-slate-100">
+    <header
+        class="bg-primary text-color dark:bg-dark-primary dark:text-dark-color"
+    >
         <nav
             class="p-6 mx-auto max-w-screen-lg flex items-center justify-between gap-2"
         >
@@ -34,7 +35,11 @@ const is_logged_in = !!page.props.auth?.user;
                 >
                     <i class="fa-solid fa-circle-half-stroke"></i>
                 </button>
-                <NavLink v-if="is_logged_in" class="flex gap-2 items-center" url="/admin">
+                <NavLink
+                    v-if="is_logged_in"
+                    class="flex gap-2 items-center"
+                    url="/admin"
+                >
                     <i class="fa-solid fa-user"></i>
                     <span>Admin</span>
                 </NavLink>

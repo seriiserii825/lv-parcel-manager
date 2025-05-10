@@ -15,6 +15,20 @@ export default {
             fontFamily: {
                 Roboto: ["Roboto", ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: {
+                    DEFAULT: "var(--primary)",
+                    light: "var(--primary-light)",
+                },
+                dark: {
+                    primary: {
+                        DEFAULT: "var(--dark-primary)",
+                        light: "var(--dark-primary-light)",
+                    },
+                    color: "var(--dark-color)",
+                },
+                color: "var(--color)",
+            },
         },
     },
     plugins: [require("@tailwindcss/forms")],
