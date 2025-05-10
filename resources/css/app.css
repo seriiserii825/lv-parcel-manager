@@ -4,12 +4,14 @@
 
 :root {
     --primary: #1e293b; /* bg-slate-800 */
-    --primary-light: #334155; /* bg-slate-700 */
-    --primary-dark: #1e293b; /* bg-slate-800 */
+    --primary-300: #334155; /* bg-slate-700 */
+    --primary-700: #0f172b; /* bg-slate-900 */
+    --primary-hover:   #1d293d; /* bg-slate-700 */
     --color: #f1f5f9; /* text-slate-100 */
 
     --dark-primary: #fff; /* text-slate-50 */
-    --dark-primary-light: #f1f5f9; /* text-slate-100 */
-    --dark-primary-dark: #334155; /* bg-slate-700 */
+    --dark-primary-300: #f1f5f9; /* text-slate-100 */
+    --dark-primary-700: #e2e8f0; /* bg-slate-200 */
+    --dark-primary-hover:   #cad5e2; /* text-slate-300 */
     --dark-color: #1e293b; /* bg-slate-800 */
 }
